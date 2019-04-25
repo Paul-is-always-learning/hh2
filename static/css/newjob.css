@@ -1,0 +1,36 @@
+/* * {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+} */
+
+div {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    font-family: sans-serif;
+}
+
+h1, form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+}
+
+table, th, td {
+    /* display: flex; */
+    border: 2px solid black;
+    border-collapse: collapse;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+

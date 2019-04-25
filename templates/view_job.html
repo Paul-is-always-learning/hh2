@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <title>View job</title>
+</head>
+
+<body>
+    <div class="header">
+
+        {% for current_user in result %}
+        <h3 class="hello">Hello, {{ current_user['first_name'] }}! These are the job details!</h3>
+
+        {% endfor %}
+
+        <a class="btn-link" href="/dashboard">Dashboard</a>
+
+        <form action="/logout" method="POST">
+            <input class="btn-link" type="submit" name="clear_session" value="Logout" >
+        </form>
+    </div>
+
+    <div>
+        {% for i in jobs %}
+        <p>{{ i['job_title'] }}</p>
+        <div class="details">
+
+            <p> {{ i['job_description'] }} </p>
+            <p> Location: {{ i['job_location'] }}</p>
+            <p> Posted by: {{ i['first_name'] }} </p>
+            <p> Posted on: {{ i['created_at'] }} </p>
+
+        {% endfor %}
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+<!-- 
+        <a class="rightalignlink" href="/users" method="GET">Home</a>
+
+    <div>
+        {% for new_user in qqqqq %}
+        <h1>User {{new_user["friend_id"]}}</h1>
+
+        <p>Full Name: {{new_user["first_name"] + ' ' + new_user['last_name']}}</p>
+
+        <p>Email: {{new_user["email"]}}</p>
+
+        <p>Created On: {{new_user["created_at"]}}</p>
+
+        <p>Last Updated: {{new_user["updated_at"]}}</p>
+        
+    </div>
+
+
+    <a class="editlink" href="/users/{{new_user["friend_id"]}}/edit" method="GET">Edit</a>
+
+    <a class="dellink" href="/users/{{new_user["friend_id"]}}/destroy" method="GET">Delete</a>
+        {% endfor %} -->
+</body>
+
+</html>

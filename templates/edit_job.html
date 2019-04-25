@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <title>Edit Job</title>
+</head>
+
+<body>
+    <div class="header">
+
+        {% for current_user in result %}
+
+        <h3 class="hello">Hello, {{ current_user['first_name'] }}! Let's edit your job!</h3>
+
+        {% endfor %}
+
+        <form action="/logout" method="POST">
+            <input type="submit" name="clear_session" value="Logout" class="btn-link">
+        </form>
+    </div>
+
+    <div class="details">
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="msg_limit_error">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form class="sendform" action="/jobs/update/<id>" method="POST">
+            <p>Title: <input type="text" name="job_title"></p>
+            <p>Description: <textarea class="textarea" name="job_description"></textarea></p>
+            <p>Location: <input type="text" name="job_location"></p>
+
+            <a href="/dashboard"><button class="btn-normal" type="button">Cancel</button></a>
+
+            <input type="hidden" name="user_accepted_job_id">
+
+            <button class="btn-normal" type="submit" value="Submit">Submit</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

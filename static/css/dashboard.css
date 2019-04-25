@@ -1,0 +1,88 @@
+* {
+    /* outline: 1px solid red; */
+    font-family: sans-serif;
+}
+
+.container {
+    /* display: flex; */
+    width: 800px;
+}
+
+.header {
+    display: flex;
+    align-items: baseline;
+}
+
+.hello {
+    margin-right: auto;
+    padding-right: 10px;
+}
+
+.create-job {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    display: flex;
+
+}
+
+.jobform {
+
+    width: 300px;
+}
+
+input {
+    display: flex;
+    margin-left: auto;
+    align-items: baseline;
+}
+
+textarea {
+    display: flex;
+    margin-left: auto;
+    align-items: baseline;
+}
+
+p {
+    display: flex;
+    padding: 5px;
+    align-items: baseline;
+}
+
+.btn-link {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color:blue;
+    padding: 0px;
+    /* text-decoration: none; */
+    font-size: inherit;
+    margin-right: 20px;
+}
+
+.btn-normal {
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 2px;
+    align-items: baseline;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+.msg_limit_error {
+    color: red;
+}
+
+.details {
+    border: 1px solid black;
+    width: 400px;
+}

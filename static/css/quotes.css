@@ -1,0 +1,108 @@
+* {
+    outline: 1px solid red;
+}
+
+.container {
+    /* display: flex; */
+    font-family: sans-serif;
+    width: 1000px;
+}
+
+.wallcontainer {
+    font-family: sans-serif;
+    width: 1000px;
+}
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.register {
+    display: flex;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.fn_error {
+    color: red;
+}
+
+.btn-link {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color:blue;
+    padding: 0px;
+    text-decoration: none;
+    font-size: inherit;
+}
+
+.textarea {
+    width: 250px;
+    height: 100px;
+    margin: 0px 5px;
+}
+
+.deletebutton {
+    width: 40px;
+    margin-left: 20px;
+}
+
+.msg_limit_error {
+    color: red;
+}
+
+.header {
+    display: flex;
+    align-items: baseline;
+}
+
+.main {
+    display: flex;
+}
+
+.quotables {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    /* align-items: flex-start; */
+    margin-left: 20px;
+}
+
+.jinjamsg {
+    padding: 5px;
+    width: 200px;
+    height: 100px;
+    display: flex;
+}
+
+.welcome {
+    margin-right: auto;
+    padding-right: 10px;
+}
+
+.sendform {
+    padding: 5px;
+}
+
+p {
+    padding: 5px;
+}
+
+.btn {
+    margin-left: 5px;
+}
+
+.rightside {
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
